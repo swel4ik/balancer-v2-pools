@@ -571,3 +571,18 @@ const _getTokenBalanceGivenInvariantAndAllOtherBalances = (
 
   throw new Error("STABLE_GET_BALANCE_DIDNT_CONVERGE");
 };
+
+
+const amp = new BigNumber('147000')
+const balances = [
+    new BigNumber("5.4271966830814916e+23"),
+    new BigNumber("4.4188939033653407e+23"),
+    new BigNumber("3.9213291871146253e+23"),
+]
+let tokenIndexIn = 2
+let tokenIndexOut = 0
+const tokenAmountIn = new BigNumber("8.0178573219702063e+19")
+const swapFee = new BigNumber("0.01")
+
+
+  console.log(_calcOutGivenIn(amp, balances, 2, 0, tokenAmountIn))
